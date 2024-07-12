@@ -1,10 +1,12 @@
-describe('Home page',()=>{
-    it('Check Input Field',()=>{
+//client/cypress/e2e/home.cy.js
+describe('Home Page test',()=>{
+    it('Check The Input field',()=>{
         cy.visit('/');
-        cy.get('input').type('Cindrella')
+        cy.get('input').type('Cinderella')
         cy.get('button').should('be.visible')
         cy.get('button').click();
-        cy.contains('Welcome,Cindrella')
-        cy.get('input').should('have.value','Cindrella')
+        cy.contains('Welcome,Cinderella')
+        cy.get('input').should('have.value','Cinderella')
+
     })
 })
